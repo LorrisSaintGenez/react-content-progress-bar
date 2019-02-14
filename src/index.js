@@ -10,10 +10,14 @@ class ProgressBar extends Component {
 
   componentDidMount() {
     window.addEventListener("scroll", () => {
-      this.refProgressBar.current.style.width = `${this.computeProgress()}%`;
+      if (this.refProgressBar && this.refProgressBar.current) {
+        this.refProgressBar.current.style.width = `${this.computeProgress()}%`;
+      }
     });
     window.addEventListener("resize", () => {
-      this.refProgressBar.current.style.width = `${this.computeProgress()}%`;
+      if (this.refProgressBar && this.refProgressBar.current) {
+        this.refProgressBar.current.style.width = `${this.computeProgress()}%`;
+      }
     });
   }
 
@@ -24,7 +28,7 @@ class ProgressBar extends Component {
 
   computeProgress = () => {
     return Math.min(
-      (window.pageYOffset / this.props.ref.current.clientHeight) * 100,
+      (window.pageYOffset / this.props.contentRef.current.clientHeight) * 100,
       100
     );
   };
