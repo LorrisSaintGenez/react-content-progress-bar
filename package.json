@@ -1,7 +1,7 @@
 {
   "name": "react-content-progress-bar",
-  "version": "1.4.3",
-  "description": "An useful Progress bar for blogs and content reading",
+  "version": "1.4.4",
+  "description": "An useful Progress Bar for blogs and content reading",
   "main": "./dist/index.js",
   "scripts": {
     "build": "BABEL_ENV=production ./node_modules/.bin/babel src -d dist",
