@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "@emotion/core";
 
 class ProgressBar extends Component {
   constructor(props) {
@@ -23,16 +22,16 @@ class ProgressBar extends Component {
   }
 
   render() {
-    const { borderColor, borderWidth } = this.props;
+    const { color, width } = this.props;
     return (
       <div
-        css={css`
-          position: fixed;
-          border-bottom: ${borderWidth}px solid ${borderColor};
-          width: 0;
-          top: 0;
-          z-index: 999;
-        `}
+        style={{
+          position: "fixed",
+          borderBottom: `${width}px solid ${color}`,
+          width: 0,
+          top: 0,
+          zIndex: 999
+        }}
         ref={this.refProgressBar}
       />
     );
@@ -40,8 +39,8 @@ class ProgressBar extends Component {
 }
 
 ProgressBar.propTypes = {
-  borderColor: PropTypes.string.isRequired,
-  borderWidth: PropTypes.number.isRequired,
+  color: PropTypes.string.isRequired,
+  width: PropTypes.number.isRequired,
   contentHeight: PropTypes.string.isRequired
 };
 
