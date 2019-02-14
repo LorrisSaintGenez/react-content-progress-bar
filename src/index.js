@@ -5,21 +5,29 @@ class ProgressBar extends Component {
   constructor(props) {
     super(props);
     this.refProgressBar = React.createRef();
+    this.computeProgress.bind(this);
   }
 
   componentDidMount() {
     window.addEventListener("scroll", () => {
-      const percent = Math.min(
-        (window.pageYOffset / this.props.contentHeight) * 100,
-        100
-      );
-      this.refProgressBar.current.style.width = `${percent}%`;
+      this.refProgressBar.current.style.width = `${this.computeProgress()}%`;
+    });
+    window.addEventListener("resize", () => {
+      this.refProgressBar.current.style.width = `${this.computeProgress()}%`;
     });
   }
 
   componentWillUnmount() {
     window.removeEventListener("scroll", this);
+    window.removeEventListener("resize", this);
   }
+
+  computeProgress = () => {
+    return Math.min(
+      (window.pageYOffset / this.props.ref.current.clientHeight) * 100,
+      100
+    );
+  };
 
   render() {
     const { color, width } = this.props;
@@ -43,7 +51,7 @@ class ProgressBar extends Component {
 ProgressBar.propTypes = {
   color: PropTypes.string.isRequired,
   width: PropTypes.number.isRequired,
-  contentHeight: PropTypes.string.isRequired
+  ref: PropTypes.object.isRequired
 };
 
 export default ProgressBar;
