@@ -51,7 +51,7 @@ class ProgressBar extends Component {
 ProgressBar.propTypes = {
   color: PropTypes.string.isRequired,
   width: PropTypes.number.isRequired,
-  ref: PropTypes.object.isRequired
+  contentRef: PropTypes.object.isRequired
 };
 
 export default ProgressBar;
