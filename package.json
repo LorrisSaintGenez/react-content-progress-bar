@@ -1,5 +1,5 @@
 {
-  "name": "react-progress-bar",
+  "name": "react-content-progress-bar",
   "version": "1.0.0",
   "description": "An useful Progress bar for blogs and content reading",
   "main": "./index.js",
