@@ -33,12 +33,12 @@ jspm_packages
 # Editors
 .idea
 
-# Lib
-lib
+# Dist
+dist
 
 # npm package lock
 package-lock.json
 yarn.lock
 
-others
+# others
 .DS_Store
