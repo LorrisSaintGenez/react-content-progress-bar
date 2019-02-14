@@ -8,7 +8,7 @@ Simple to use and to implement for your blog or website
 
 # Usage
 
-Just import the ProgressBar, like you'd do with any other componant
+Import the ProgressBar:
 
 ```javascript
 import ProgressBar from "react-content-progress-bar";
@@ -18,12 +18,12 @@ You have **three** parameters available:
 
 - `width`: Width of the progress bar
 - `color`: Color of the progress bar
-- `contentHeight`: The height of the content you want to cover (ie. blog post, article.). Usuallly, not the whole page.
+- `contentHeight`: The height of the content you want to cover (ie. blog post, article..).
 
 Use it like this:
 
 ```javascript
-<ProgressBar color="#fff" width={3} contentHeight="800" />
+<ProgressBar width={3} color="#fff" contentHeight="800" />
 ```
 
 # License
