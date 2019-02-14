@@ -18,12 +18,12 @@ You have **three** parameters available:
 
 - `width`: Width of the progress bar
 - `color`: Color of the progress bar
-- `contentHeight`: The height of the content you want to cover (ie. blog post, article..).
+- `ref`: The Ref of the content you want to cover (ie. blog post, article..). (See https://reactjs.org/docs/refs-and-the-dom.html)
 
 Use it like this:
 
 ```javascript
-<ProgressBar width={3} color="#fff" contentHeight="800" />
+<ProgressBar width={3} color="#fff" ref={this.myRef} />
 ```
 
 # License
