@@ -2,14 +2,14 @@
   "name": "react-content-progress-bar",
   "version": "1.0.0",
   "description": "An useful Progress bar for blogs and content reading",
-  "main": "./index.js",
+  "main": "./dist/build.js",
   "scripts": {
     "clean": "rimraf lib",
     "build": "webpack --mode production",
     "prepublish": "npm run clean && npm run test && npm run build"
   },
   "files": [
-    "src"
+    "dist"
   ],
   "repository": {
     "type": "git",
