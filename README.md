@@ -1,22 +1,13 @@
-# NPM Module Boilerplate
+# React Progress Bar
 
-[![Build Status](https://travis-ci.org/flexdinesh/npm-module-boilerplate.svg?branch=master)](https://travis-ci.org/flexdinesh/npm-module-boilerplate) [![dependencies Status](https://david-dm.org/flexdinesh/npm-module-boilerplate/status.svg)](https://david-dm.org/flexdinesh/npm-module-boilerplate) [![devDependencies Status](https://david-dm.org/flexdinesh/npm-module-boilerplate/dev-status.svg)](https://david-dm.org/flexdinesh/npm-module-boilerplate?type=dev) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.org/flexdinesh/npm-module-boilerplate.svg?branch=master)](https://travis-ci.org/LorrisSaintGenez/react-progress-bar) [![dependencies Status](https://david-dm.org/LorrisSaintGenez/react-progress-bar/status.svg)](https://david-dm.org/LorrisSaintGenez/react-progress-bar) [![devDependencies Status](https://david-dm.org/LorrisSaintGenez/react-progress-bar/dev-status.svg)](https://david-dm.org/LorrisSaintGenez/react-progress-bar?type=dev) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-**Start developing your NPM module in seconds** ✨
+**Adaptative Progress Bar for all usage !** ✨
 
-Readymade boilerplate setup with all the best practices to kick start your npm/node module development.
-
-Happy hacking =)
-
-# Features
-
-* **ES6/ESNext** - Write _ES6_ code and _Babel_ will transpile it to ES5 for backwards compatibility
-* **Test** - _Mocha_ with _Istanbul_ coverage
-* **Lint** - Preconfigured _ESlint_ with _Airbnb_ config
-* **CI** - _TravisCI_ configuration setup
-* **Minify** - Built code will be minified for performance
+Simple to use and to implement for your blog or website
 
 # Commands
+
 - `npm run clean` - Remove `lib/` directory
 - `npm test` - Run tests with linting and coverage results.
 - `npm test:only` - Run tests without linting or coverage.
@@ -29,9 +20,9 @@ Happy hacking =)
 - `npm run prepublish` - Hook for npm. Do all the checks before publishing your module.
 
 # Installation
-Just clone this repo and remove `.git` folder.
 
+Just clone this repo and remove `.git` folder.
 
 # License
 
-MIT © Dinesh Pandiyan
+MIT © Lorris Saint-Genez
