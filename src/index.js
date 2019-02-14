@@ -27,7 +27,9 @@ class ProgressBar extends Component {
       <div
         style={{
           position: "fixed",
-          borderBottom: `${width}px solid ${color}`,
+          borderBottomWidth: width,
+          borderBottomStyle: "solid",
+          borderBottomColor: color,
           width: 0,
           top: 0,
           zIndex: 999
