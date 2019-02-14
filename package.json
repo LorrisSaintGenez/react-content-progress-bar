@@ -1,6 +1,6 @@
 {
   "name": "react-content-progress-bar",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "An useful Progress bar for blogs and content reading",
   "main": "./dist/index.js",
   "scripts": {
