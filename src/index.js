@@ -34,14 +34,14 @@ class ProgressBar extends Component {
   };
 
   render() {
-    const { color, width } = this.props;
+    const { color, style, width } = this.props;
     return (
       <div
         style={{
           position: "fixed",
-          borderBottomWidth: width,
-          borderBottomStyle: "solid",
           borderBottomColor: color,
+          borderBottomStyle: style,
+          borderBottomWidth: width,
           width: 0,
           top: 0,
           zIndex: 999
@@ -53,9 +53,16 @@ class ProgressBar extends Component {
 }
 
 ProgressBar.propTypes = {
-  color: PropTypes.string.isRequired,
-  width: PropTypes.number.isRequired,
+  color: PropTypes.string,
+  style: PropTypes.string,
+  width: PropTypes.number,
   contentRef: PropTypes.object.isRequired
+};
+
+ProgressBar.defaultProps = {
+  color: "white",
+  style: "solid",
+  width: "1"
 };
 
 export default ProgressBar;
