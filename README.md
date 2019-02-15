@@ -24,7 +24,7 @@ You have **three** parameters available:
 Use it like this:
 
 ```javascript
-<ProgressBar width={3} color="#fff" ref={this.myRef} />
+<ProgressBar color="#fff" style="solid" width={3} ref={this.myRef} />
 ```
 
 # License
