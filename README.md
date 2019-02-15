@@ -14,7 +14,7 @@ Import the ProgressBar:
 import ProgressBar from "react-content-progress-bar";
 ```
 
-You have **three** parameters available:
+You have **four** parameters available:
 
 - `color`: Color of the progress bar
   - default: white
