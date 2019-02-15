@@ -16,8 +16,9 @@ import ProgressBar from "react-content-progress-bar";
 
 You have **three** parameters available:
 
-- `width`: Width of the progress bar
 - `color`: Color of the progress bar
+- `style`: Style of the progress bar (solid, dashed, dotted..)
+- `width`: Width of the progress bar
 - `ref`: The Ref of the content you want to cover (ie. blog post, article..). (See https://reactjs.org/docs/refs-and-the-dom.html)
 
 Use it like this:
