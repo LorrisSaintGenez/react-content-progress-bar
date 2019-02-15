@@ -1,6 +1,6 @@
 {
   "name": "react-content-progress-bar",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "An useful Progress Bar for blogs and content reading",
   "main": "./dist/index.js",
   "scripts": {
@@ -16,7 +16,13 @@
   },
   "keywords": [
     "react",
-    "progressbar"
+    "progressbar",
+    "progress",
+    "bar",
+    "content",
+    "blog",
+    "article",
+    "reading"
   ],
   "author": "Lorris Saint-Genez",
   "license": "MIT",
