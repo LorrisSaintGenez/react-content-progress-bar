@@ -44,13 +44,7 @@ class ProgressBar extends Component {
   };
 
   render() {
-    const {
-      color,
-      style,
-      backgroundColor,
-      thickness,
-      borderRadius
-    } = this.props;
+    const { color, style, backgroundColor, thickness, radius } = this.props;
     return (
       <div
         style={{
@@ -67,8 +61,8 @@ class ProgressBar extends Component {
             borderBottomColor: color,
             borderBottomStyle: style,
             borderBottomWidth: thickness,
-            borderBottomRightRadius: borderRadius,
-            borderTopRightRadius: borderRadius,
+            borderBottomRightRadius: radius,
+            borderTopRightRadius: radius,
             width: 0
           }}
           ref={this.refProgressBar}
