@@ -83,7 +83,7 @@ ProgressBar.defaultProps = {
   color: "white",
   style: "solid",
   width: "1",
-  backgroundColor: "blue",
+  backgroundColor: "transparent",
   callback: () => {}
 };
 
