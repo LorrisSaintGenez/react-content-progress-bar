@@ -14,7 +14,7 @@ Import the ProgressBar:
 import ProgressBar from "react-content-progress-bar";
 ```
 
-You have **four** parameters available:
+You have **six** parameters available:
 
 - `color`: Color of the progress bar
   - default: white
@@ -24,11 +24,22 @@ You have **four** parameters available:
   - default: 1
 - `ref`: The Ref of the content you want to cover (ie. blog post, article..). (See https://reactjs.org/docs/refs-and-the-dom.html)
   - **REQUIRED**
+- `backgroundColor`: Color of the progress bar background
+  - default: transparent
+- `callback`: Function to be called when the progress bar reaches the end
+  - default: () => {}
 
 Use it like this:
 
 ```javascript
-<ProgressBar color="#fff" style="solid" width={3} ref={this.myRef} />
+<ProgressBar
+  color="#fff"
+  style="solid"
+  width={3}
+  ref={this.myRef}
+  backgroundColor="rgba(125, 125, 125, 0.8)"
+  callback={() => console.log("Reached the end of my document")}
+/>
 ```
 
 # License
