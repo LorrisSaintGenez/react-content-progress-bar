@@ -44,15 +44,21 @@ class ProgressBar extends Component {
   };
 
   render() {
-    const { color, style, width, backgroundColor } = this.props;
+    const {
+      color,
+      style,
+      backgroundColor,
+      thickness,
+      borderRadius
+    } = this.props;
     return (
       <div
         style={{
-          position: "fixed",
           backgroundColor,
-          width: "100%",
-          height: width,
+          height: thickness,
+          position: "fixed",
           top: 0,
+          width: "100%",
           zIndex: 999
         }}
       >
@@ -60,7 +66,9 @@ class ProgressBar extends Component {
           style={{
             borderBottomColor: color,
             borderBottomStyle: style,
-            borderBottomWidth: width,
+            borderBottomWidth: thickness,
+            borderBottomRightRadius: borderRadius,
+            borderTopRightRadius: borderRadius,
             width: 0
           }}
           ref={this.refProgressBar}
@@ -71,20 +79,22 @@ class ProgressBar extends Component {
 }
 
 ProgressBar.propTypes = {
-  color: PropTypes.string,
-  style: PropTypes.string,
-  width: PropTypes.number,
-  contentRef: PropTypes.object.isRequired,
   backgroundColor: PropTypes.string,
-  callback: PropTypes.func
+  callback: PropTypes.func,
+  color: PropTypes.string,
+  contentRef: PropTypes.object.isRequired,
+  radius: PropTypes.number,
+  style: PropTypes.string,
+  thickness: PropTypes.number
 };
 
 ProgressBar.defaultProps = {
-  color: "white",
-  style: "solid",
-  width: "1",
   backgroundColor: "transparent",
-  callback: () => {}
+  callback: () => {},
+  color: "white",
+  radius: 0,
+  style: "solid",
+  thickness: 1
 };
 
 export default ProgressBar;
