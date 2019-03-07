@@ -6,18 +6,17 @@ class ProgressBar extends Component {
     super(props);
     this.refProgressBar = React.createRef();
     this.computeProgress.bind(this);
+    this.state = {
+      progress: 0
+    };
   }
 
   componentDidMount() {
     window.addEventListener("scroll", () => {
-      if (this.refProgressBar && this.refProgressBar.current) {
-        this.refProgressBar.current.style.width = `${this.computeProgress()}%`;
-      }
+      this.displayProgress();
     });
     window.addEventListener("resize", () => {
-      if (this.refProgressBar && this.refProgressBar.current) {
-        this.refProgressBar.current.style.width = `${this.computeProgress()}%`;
-      }
+      this.displayProgress();
     });
   }
 
@@ -33,21 +32,40 @@ class ProgressBar extends Component {
     );
   };
 
+  displayProgress = () => {
+    if (this.refProgressBar && this.refProgressBar.current) {
+      const progress = this.computeProgress();
+      this.refProgressBar.current.style.width = `${progress}%`;
+      if (this.state.progress < 100 && progress === 100) {
+        this.props.callback();
+      }
+      this.setState({ progress });
+    }
+  };
+
   render() {
-    const { color, style, width } = this.props;
+    const { color, style, width, backgroundColor } = this.props;
     return (
       <div
         style={{
           position: "fixed",
-          borderBottomColor: color,
-          borderBottomStyle: style,
-          borderBottomWidth: width,
-          width: 0,
+          backgroundColor,
+          width: "100%",
+          height: width,
           top: 0,
           zIndex: 999
         }}
-        ref={this.refProgressBar}
-      />
+      >
+        <div
+          style={{
+            borderBottomColor: color,
+            borderBottomStyle: style,
+            borderBottomWidth: width,
+            width: 0
+          }}
+          ref={this.refProgressBar}
+        />
+      </div>
     );
   }
 }
@@ -56,13 +74,17 @@ ProgressBar.propTypes = {
   color: PropTypes.string,
   style: PropTypes.string,
   width: PropTypes.number,
-  contentRef: PropTypes.object.isRequired
+  contentRef: PropTypes.object.isRequired,
+  backgroundColor: PropTypes.string,
+  callback: PropTypes.func
 };
 
 ProgressBar.defaultProps = {
   color: "white",
   style: "solid",
-  width: "1"
+  width: "1",
+  backgroundColor: "blue",
+  callback: () => {}
 };
 
 export default ProgressBar;
