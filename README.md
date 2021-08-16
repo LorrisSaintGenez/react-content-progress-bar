@@ -22,7 +22,7 @@ You have **seven** parameters available:
   - default: () => {}
 - `color`: Color of the progress bar
   - default: white
-- `ref`: The Ref of the content you want to cover (ie. blog post, article..). (See https://reactjs.org/docs/refs-and-the-dom.html)
+- `contentRef`: The Ref of the content you want to cover (ie. blog post, article..). (See https://reactjs.org/docs/refs-and-the-dom.html)
   - **REQUIRED**
 - `radius` (previously `borderRadius`): Radius of the right border side (top-right and bottom-right) (in **px**)
   - default: 0
@@ -39,7 +39,7 @@ Use it like this:
   callback={() => console.log("Reached the end of my document")}
   color="#fff"
   radius={2}
-  ref={this.myRef}
+  contentRef={this.myRef}
   style="solid"
   thickness={3}
 />
